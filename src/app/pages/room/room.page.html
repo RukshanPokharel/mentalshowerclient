@@ -182,96 +182,58 @@
         />
       </svg>
     </div>
-  </div>
 
-  <div class="location-content-wrapper">
-    <div class="location-icn-wrapper">
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 18 18"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M9 1.5C6.0975 1.5 3.75 3.8475 3.75 6.75C3.75 8.055 4.125 9.2775 4.8075 10.38C5.52 11.535 6.4575 12.525 7.1775 13.68C7.53 14.2425 7.785 14.7675 8.055 15.375C8.25 15.7875 8.4075 16.5 9 16.5C9.5925 16.5 9.75 15.7875 9.9375 15.375C10.215 14.7675 10.4625 14.2425 10.815 13.68C11.535 12.5325 12.4725 11.5425 13.185 10.38C13.875 9.2775 14.25 8.055 14.25 6.75C14.25 3.8475 11.9025 1.5 9 1.5ZM9 8.8125C7.965 8.8125 7.125 7.9725 7.125 6.9375C7.125 5.9025 7.965 5.0625 9 5.0625C10.035 5.0625 10.875 5.9025 10.875 6.9375C10.875 7.9725 10.035 8.8125 9 8.8125Z"
-          fill="#F72585"
-        />
-      </svg>
+    <div class="location-content-wrapper">
+      <div class="location-icn-wrapper">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 1.5C6.0975 1.5 3.75 3.8475 3.75 6.75C3.75 8.055 4.125 9.2775 4.8075 10.38C5.52 11.535 6.4575 12.525 7.1775 13.68C7.53 14.2425 7.785 14.7675 8.055 15.375C8.25 15.7875 8.4075 16.5 9 16.5C9.5925 16.5 9.75 15.7875 9.9375 15.375C10.215 14.7675 10.4625 14.2425 10.815 13.68C11.535 12.5325 12.4725 11.5425 13.185 10.38C13.875 9.2775 14.25 8.055 14.25 6.75C14.25 3.8475 11.9025 1.5 9 1.5ZM9 8.8125C7.965 8.8125 7.125 7.9725 7.125 6.9375C7.125 5.9025 7.965 5.0625 9 5.0625C10.035 5.0625 10.875 5.9025 10.875 6.9375C10.875 7.9725 10.035 8.8125 9 8.8125Z"
+            fill="#F72585"
+          />
+        </svg>
+      </div>
+      <p>No Zone Selected</p>
     </div>
-    <p>D3.05 Zone: 13</p>
   </div>
 
   <div class="main-content-wrapper">
-    <div class="air-quality-wrapper">
-      <h1>How is the air quality?</h1>
-      <ion-range
-        class="custom-range"
-        value="2"
-        step="1"
-        snaps="true"
-        min="0"
-        max="6"
-        [pin]="true"
-      >
-        <ion-icon size="small" slot="start" name="apps-outline"></ion-icon>
-        <ion-icon size="small" slot="end" name="apps-outline"></ion-icon>
-      </ion-range>
-      <div class="helper-text-wrapper">
-        <small>Fresh</small>
-        <small>Stuffy</small>
-      </div>
-    </div>
-    <div class="temperature-wrapper">
-      <h1>How is the temperature?</h1>
-
-      <ion-range
-        class="custom-range"
-        value="2"
-        step="1"
-        snaps="true"
-        min="0"
-        max="6"
-        [pin]="true"
-      >
-        <ion-icon
-          size="small"
-          slot="start"
-          name="thermometer-outline"
-        ></ion-icon>
-        <ion-icon size="small" slot="end" name="thermometer-outline"></ion-icon>
-      </ion-range>
-      <div class="helper-text-wrapper">
-        <small>Cold</small>
-        <small>Warm</small>
-      </div>
-    </div>
-
-    <div class="humidity-wrapper">
-      <h1>How is the humidity?</h1>
-
-      <ion-range
-        class="custom-range"
-        value="2"
-        step="1"
-        snaps="true"
-        min="0"
-        max="6"
-        [pin]="true"
-      >
-        <ion-icon size="small" slot="start" name="water-outline"></ion-icon>
-        <ion-icon size="small" slot="end" name="water-outline"></ion-icon>
-      </ion-range>
-      <div class="helper-text-wrapper">
-        <small>Dry</small>
-        <small>Damp</small>
-      </div>
-    </div>
+    <ion-item>
+      <ion-label>Room</ion-label>
+      <ion-select value="D3.05" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="D3.05">D3.05</ion-select-option>
+        <ion-select-option value="D3.06">D3.06</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Zone</ion-label>
+      <ion-select value="1" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option value="6">6</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select value="Male" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Non-binary">Non-binary</ion-select-option>
+      </ion-select>
+    </ion-item>
     <div class="btn-wrapper">
       <div class="button-wrapper">
         <ion-button
           class="custom-btn"
-          [routerLink]="['/room']"
+          [routerLink]="['/home']"
           expand="block"
           fill="outline"
           >Prev
