@@ -199,7 +199,7 @@
         />
       </svg>
     </div>
-    <p>D3.05 Zone: 13</p>
+    <p> Room: {{roomNo}} , Zone: {{zone}}</p>
   </div>
 
   <div class="main-content-wrapper">
@@ -213,6 +213,8 @@
         min="0"
         max="6"
         [pin]="true"
+        [(ngModel)]="AQ"
+        (ionChange)="getAQ(AQ)"
       >
         <ion-icon size="small" slot="start" name="apps-outline"></ion-icon>
         <ion-icon size="small" slot="end" name="apps-outline"></ion-icon>
@@ -233,6 +235,8 @@
         min="0"
         max="6"
         [pin]="true"
+        [(ngModel)]="Temp"
+        (ionChange)="getTemperature(Temp)"
       >
         <ion-icon
           size="small"
@@ -258,6 +262,8 @@
         min="0"
         max="6"
         [pin]="true"
+        [(ngModel)]="Humid"
+        (ionChange)="getHumid(Humid)"
       >
         <ion-icon size="small" slot="start" name="water-outline"></ion-icon>
         <ion-icon size="small" slot="end" name="water-outline"></ion-icon>
@@ -281,10 +287,11 @@
       <div class="button-wrapper">
         <ion-button
           class="custom-btn"
-          [routerLink]="['/input']"
+          (click)="SaveClimateDataToStorage()"
+          
           expand="block"
           fill="outline"
-          >Next
+          >Sumbit
           <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
         </ion-button>
       </div>
