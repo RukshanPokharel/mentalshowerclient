@@ -5,7 +5,6 @@ import {
   ChangeDetectorRef,
   Component,
   ElementRef,
-  OnInit,
   QueryList,
   ViewChild,
   ViewChildren,
@@ -13,6 +12,7 @@ import {
 import {
   Gesture,
   GestureController,
+  IonCard,
   IonItem,
   ModalController,
 } from '@ionic/angular';
@@ -35,7 +35,7 @@ export class PlayquizComponent implements AfterViewInit {
   @ViewChild('dropzoneAQ') dropAQ: ElementRef;
   @ViewChild('dropzoneHumid') dropHumid: ElementRef;
 
-  @ViewChildren(IonItem, { read: ElementRef }) items: QueryList<ElementRef>;
+  @ViewChildren(IonCard, { read: ElementRef }) items: QueryList<ElementRef>;
 
   constructor(
     private mdlCtrl: ModalController,
