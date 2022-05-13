@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Drag and Drop
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="contentScrollActive">
+
+  <div slot="fixed" class="fixed-box">
+    <div class="drop-area" #dropzoneTemp>
+      <b>
+        Temperature
+      </b>
+    </div>
+
+    <div class="drop-area" #dropzoneAQ>
+      <b>
+        Air Quality
+      </b>
+    </div>
+
+    <div class="drop-area" #dropzoneHumid>
+      <b>
+        Humidity
+      </b>
+    </div>
+  </div>
+
+  <div class="item-group">
+    <ion-item *ngFor="let i of myArray">
+      {{i}} °C
+    </ion-item>
+    
+  </div>
+</ion-content>

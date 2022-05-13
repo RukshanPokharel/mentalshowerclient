@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 // import { Animation, AnimationController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { ModalPage } from './modal.page';
+import { PlayquizComponent } from './playquiz/playquiz.component';
 // import { ModalPage } from '../modal/modal.page';
 
 @Component({
@@ -87,6 +88,14 @@ export class InputPage implements OnInit {
   async PopUpModal() {
     const modal = await this.modalController.create({
       component: ModalPage,
+      // cssClass: 'my-custom-class',
+    });
+    return await modal.present();
+  }
+
+  async PopUpModalQuiz() {
+    const modal = await this.modalController.create({
+      component: PlayquizComponent,
       // cssClass: 'my-custom-class',
     });
     return await modal.present();
