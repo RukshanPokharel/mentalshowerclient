@@ -5,6 +5,10 @@ import { RoomZone } from 'src/app/models/RoomZone.model';
 import { AdminService } from '../../services/admin.service';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+// import { Animation, AnimationController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalPage } from './modal.page';
+// import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-input',
@@ -12,6 +16,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./input.page.scss'],
 })
 export class InputPage implements OnInit {
+  // The `ion-modal` element reference.
+  modal: HTMLElement;
+
   public roomNo: string;
   public zone: string;
   public AQ: string;
@@ -22,8 +29,17 @@ export class InputPage implements OnInit {
   constructor(
     private adminservice: AdminService,
     private alertCtrl: AlertController,
-    public router: Router
-  ) {}
+    public router: Router, // private animationCtrl: AnimationController
+    public modalController: ModalController
+  ) {
+    //   const animation: Animation = this.animationCtrl
+    //     .create()
+    //     .addElement(document.querySelector('.modalinfo'))
+    //     .duration(1500)
+    //     .iterations(Infinity)
+    //     .fromTo('transform', 'translateX(0px)', 'translateX(100px)')
+    //     .fromTo('opacity', '1', '0.2');
+  }
 
   ngOnInit() {
     this.GetZoneDataToStorage();
@@ -53,9 +69,6 @@ export class InputPage implements OnInit {
 
   async presentAlert() {
     let alert = this.alertCtrl.create({
-      // title: 'Low battery',
-      // subTitle: '10% of battery remaining',
-      // buttons: ['Dismiss'],
       header: 'Climate Control',
       subHeader:
         'Thank you for submitting your response. Take out our quiz for the app and earn exciting badges',
@@ -69,5 +82,13 @@ export class InputPage implements OnInit {
       ],
     });
     (await alert).present();
+  }
+
+  async PopUpModal() {
+    const modal = await this.modalController.create({
+      component: ModalPage,
+      // cssClass: 'my-custom-class',
+    });
+    return await modal.present();
   }
 }

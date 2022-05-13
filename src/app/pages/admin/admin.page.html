@@ -9,162 +9,46 @@
   <!-- <ion-button (click)="toggleBulkEdit()" expand="full">Bulk Edit</ion-button>
   <ion-button (click)="bulkDelete()" expand="full" color="danger" *ngIf="bulkEdit">Bulk Delete</ion-button> -->
 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Zone</th>
+        <th scope="col">Room No</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Humidity</th>
+        <th scope="col">Air Quality</th>
+        <th scope="col">Temperature</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of inputClimateNumbers">
+        <td>{{ item.zoneNo }}</td>
+        <td>{{ item.roomNo }}</td>
+        <td>{{ item.gender }}</td>
+        <td>{{ item.humidity }}</td>
+        <td>{{ item.airQuality }}</td>
+        <td>{{ item.temperature }}</td>
+        <td style="display: flex">
+          <!-- <ion-button color="warning" size="small" routerLink='/student-edit/{{item.id}}'>
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+          <ion-button color="danger" size="small" (click)="delete(item)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button> -->
 
-  <ion-row class="header-row">
-    <!-- <ion-col size="2" *ngIf="bulkEdit">
-      Select
-    </ion-col> -->
-    <!-- <ion-col size="6" size-md="4" size-lg="2" tappable (click)="sortBy('email')">
-      Email
-      <ion-icon name="arrow-down" *ngIf="sortDirection === 1"></ion-icon>
-      <ion-icon name="arrow-up" *ngIf="sortDirection === 2"></ion-icon>
-
-    </ion-col> -->
-
-    <ion-col size="6" size-md="4" size-lg="2">
-      Zone
-    </ion-col>
-
-    <ion-col size="6" size-md="4" size-lg="2">
-      Room No
-    </ion-col>
-
-    <!-- <ion-col size="2" class="ion-hide-md-down">
-      Gender
-    </ion-col> -->
-
-    <ion-col size="2">
-      Gender
-    </ion-col>
-
-    <ion-col size="2" >
-     Humidity
-    </ion-col>
-
-    <ion-col size="2" >
-      Air Quality
-    </ion-col>
-
-    <ion-col size="2" >
-      Temperature
-    </ion-col>
-
-    <ion-col size="2" >
-      Action
-    </ion-col>
-
-    <!-- <ion-col size="2" *ngIf="!bulkEdit">
-      Action
-    </ion-col> -->
-
-  </ion-row>
-
-  <ion-row *ngFor="let row of inputClimateNumbers;" class="data-row">
-    <!-- <ion-col size="2" *ngIf="bulkEdit">
-      
-    </ion-col> -->
-    <ion-col size="6" size-md="4" size-lg="2">
-      {{row.zoneNo}}
-    </ion-col>
-
-    <ion-col size="6" size-md="4" size-lg="2">
-      {{row.roomNo}}
-    </ion-col>
-
-    <ion-col size="2" class="ion-hide-md-down">
-      {{row.gender}}
-    </ion-col>
-
-    <ion-col size="2" >
-      {{row.humidity}}
-    </ion-col>
-
-    <ion-col size="2" >
-      {{row.airQuality}}
-    </ion-col>
-
-    <ion-col size="2" >
-      {{row.temperature}}
-    </ion-col>
-
-    <ion-col size="2">
-      <ion-button size="small" (click)="removeRow(row)" color="dark" fill="clear">
-        <ion-icon name="trash" slot="icon-only"></ion-icon>
-      </ion-button>
-
-      <ion-button size="small" (click)="editRow(row)" color="dark" fill="clear">
-        <ion-icon name="create-outline" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <!-- <ion-col size="2" *ngIf="!bulkEdit">
-      <ion-button size="small" (click)="removeRow(i)" color="light" fill="clear">
-        <ion-icon name="trash" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-col> -->
-
-  </ion-row>
-
-<!-- 
-  <form [formGroup]="validationForm">
-      
-    <ion-item>
-      <ion-label position="folating">Zone No</ion-label>
-      <ion-input formControlName="zoneNo" type="number" 
-      [class.invalid]="!slideOneForm.controls.firstName.valid && (slideOneForm.controls.firstName.dirty || submitAttempt)">
-    </ion-input>
-    </ion-item>
-
-    <ion-item
-    *ngIf="!slideOneForm.controls.firstName.valid  && (slideOneForm.controls.firstName.dirty || submitAttempt)"
-  >
-    <p>Please enter a valid zone.</p>
-  </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Gender</ion-label>
-      <ion-input formControlName="gender" type="text" [class.invalid]="!slideOneForm.controls.lastName.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
-    </ion-item>
-
-    <ion-item
-    *ngIf="!slideOneForm.controls.lastName.valid  && (slideOneForm.controls.lastName.dirty || submitAttempt)"
-  >
-    <p>Please enter a valid gender.</p>
-  </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Humidity</ion-label>
-      <ion-input formControlName="humidity" type="number" [class.invalid]="!slideOneForm.controls.age.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
-    </ion-item>
-
-    <ion-item
-    *ngIf="!slideOneForm.controls.age.valid  && (slideOneForm.controls.age.dirty || submitAttempt)"
-  >
-    <p>Please enter a valid number.</p>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Air Quality</ion-label>
-    <ion-input formControlName="airQuality" type="number" [class.invalid]="!slideOneForm.controls.age.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
-  </ion-item>
-
-  <ion-item
-  *ngIf="!slideOneForm.controls.age.valid  && (slideOneForm.controls.age.dirty || submitAttempt)"
->
-  <p>Please enter a valid age.</p>
-</ion-item>
-
-<ion-item>
-  <ion-label position="floating">Temperature</ion-label>
-  <ion-input formControlName="temperature" type="number" [class.invalid]="!slideOneForm.controls.age.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
-</ion-item>
-
-<ion-item
-*ngIf="!slideOneForm.controls.age.valid  && (slideOneForm.controls.age.dirty || submitAttempt)"
->
-<p>Please enter a valid age.</p>
-</ion-item>
-
-  </form> -->
+          <ion-button size="small" (click)="removeRow(item)" color="dark" fill="clear">
+            <ion-icon name="trash" slot="icon-only"></ion-icon>
+          </ion-button>
+    
+          <ion-button size="small" (click)="editRow(item)" color="dark" fill="clear">
+            <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 <form [formGroup]="validationForm">
 

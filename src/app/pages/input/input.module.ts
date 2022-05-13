@@ -7,14 +7,13 @@ import { IonicModule } from '@ionic/angular';
 import { InputPageRoutingModule } from './input-routing.module';
 
 import { InputPage } from './input.page';
+import { ModalPage } from './modal.page';
+
+// import { Animation, AnimationController } from '@ionic/angular';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    InputPageRoutingModule
-  ],
-  declarations: [InputPage]
+  imports: [CommonModule, FormsModule, IonicModule, InputPageRoutingModule],
+  declarations: [InputPage, ModalPage],
+  // entryComponents: [ModalPage],
 })
 export class InputPageModule {}
