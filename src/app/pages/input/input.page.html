@@ -224,74 +224,77 @@
   </ion-modal> -->
   
   <div class="main-content-wrapper">
-    <div class="air-quality-wrapper">
-      <h1>How is the air quality?</h1>
-      <ion-range
-        class="custom-range"
-        value="2"
-        step="1"
-        snaps="true"
-        min="0"
-        max="6"
-        [pin]="true"
-        [(ngModel)]="AQ"
-        (ionChange)="getAQ(AQ)"
-      >
-        <ion-icon size="small" slot="start" name="apps-outline"></ion-icon>
-        <ion-icon size="small" slot="end" name="apps-outline"></ion-icon>
-      </ion-range>
-      <div class="helper-text-wrapper">
-        <small>Fresh</small>
-        <small>Stuffy</small>
+    <div class="item-wrapper">
+      
+      <div class="air-quality-wrapper">
+        <h1>How do you feel about air quality?</h1>
+        <ion-range
+          class="custom-range"
+          value="2"
+          step="1"
+          snaps="true"
+          min="0"
+          max="6"
+          [pin]="true"
+          [(ngModel)]="AQ"
+          (ionChange)="getAQ(AQ)"
+        >
+          <ion-icon size="small" slot="start" name="cloud-outline"></ion-icon>
+          <ion-icon size="small" slot="end" name="thunderstorm-outline"></ion-icon>
+        </ion-range>
+        <div class="helper-text-wrapper">
+          <small>Fresh</small>
+          <small>Stuffy</small>
+        </div>
       </div>
-    </div>
-    <div class="temperature-wrapper">
-      <h1>How is the temperature?</h1>
-
-      <ion-range
-        class="custom-range"
-        value="2"
-        step="1"
-        snaps="true"
-        min="0"
-        max="6"
-        [pin]="true"
-        [(ngModel)]="Temp"
-        (ionChange)="getTemperature(Temp)"
-      >
-        <ion-icon
-          size="small"
-          slot="start"
-          name="thermometer-outline"
-        ></ion-icon>
-        <ion-icon size="small" slot="end" name="thermometer-outline"></ion-icon>
-      </ion-range>
-      <div class="helper-text-wrapper">
-        <small>Cold</small>
-        <small>Warm</small>
+      <div class="temperature-wrapper">
+        <h1>How do you feel about temperature?</h1>
+  
+        <ion-range
+          class="custom-range"
+          value="2"
+          step="1"
+          snaps="true"
+          min="0"
+          max="6"
+          [pin]="true"
+          [(ngModel)]="Temp"
+          (ionChange)="getTemperature(Temp)"
+        >
+          <ion-icon
+            size="small"
+            slot="start"
+            name="snow-outline"
+          ></ion-icon>
+          <ion-icon size="small" slot="end" name="thermometer-outline"></ion-icon>
+        </ion-range>
+        <div class="helper-text-wrapper">
+          <small>Cold</small>
+          <small>Warm</small>
+        </div>
       </div>
-    </div>
-
-    <div class="humidity-wrapper">
-      <h1>How is the humidity?</h1>
-
-      <ion-range
-        class="custom-range"
-        value="2"
-        step="1"
-        snaps="true"
-        min="0"
-        max="6"
-        [pin]="true"
-        [(ngModel)]="Humid"
-        (ionChange)="getHumid(Humid)"
-      >
-        <ion-icon size="small" slot="start" name="water-outline"></ion-icon>
-        <ion-icon size="small" slot="end" name="water-outline"></ion-icon>
-      </ion-range>
-      <div class="helper-text-wrapper">
-        <small>Dry</small>
-        <small>Damp</small>
+  
+      <div class="humidity-wrapper">
+        <h1>How do you feel about the humidity?</h1>
+  
+        <ion-range
+          class="custom-range"
+          value="2"
+          step="1"
+          snaps="true"
+          min="0"
+          max="6"
+          [pin]="true"
+          [(ngModel)]="Humid"
+          (ionChange)="getHumid(Humid)"
+        >
+          <ion-icon size="small" slot="start" name="water-outline"></ion-icon>
+          <ion-icon size="small" slot="end" name="water"></ion-icon>
+        </ion-range>
+        <div class="helper-text-wrapper">
+          <small>Dry</small>
+          <small>Damp</small>
+        </div>
       </div>
     </div>
     <div class="btn-wrapper">

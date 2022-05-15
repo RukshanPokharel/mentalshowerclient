@@ -209,32 +209,35 @@
   </div>
 
   <div class="main-content-wrapper">
-    <ion-item>
-      <ion-label>Room</ion-label>
-      <ion-select [(ngModel)]="roomNo" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="D3.05">D3.05</ion-select-option>
-        <ion-select-option value="D3.06">D3.06</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Zone</ion-label>
-      <ion-select [(ngModel)]="zoneNo" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="1">1</ion-select-option>
-        <ion-select-option value="2">2</ion-select-option>
-        <ion-select-option value="3">3</ion-select-option>
-        <ion-select-option value="4">4</ion-select-option>
-        <ion-select-option value="5">5</ion-select-option>
-        <ion-select-option value="6">6</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Gender</ion-label>
-      <ion-select [(ngModel)]="gender" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="M">Male</ion-select-option>
-        <ion-select-option value="F">Female</ion-select-option>
-        <ion-select-option value="Non-binary">Non-binary</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <div class="item-wrapper">
+      <ion-item>
+        <ion-label>Room</ion-label>
+        <ion-select [(ngModel)]="roomNo" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="D3.05">D3.05</ion-select-option>
+          <ion-select-option value="D3.06">D3.06</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Zone</ion-label>
+        <ion-select [(ngModel)]="zoneNo" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="gender" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="M">Male</ion-select-option>
+          <ion-select-option value="F">Female</ion-select-option>
+          <ion-select-option value="Non-binary">Non-binary</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </div>
     <div class="btn-wrapper">
       <div class="button-wrapper">
         <ion-button
