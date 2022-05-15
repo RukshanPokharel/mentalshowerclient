@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable @typescript-eslint/type-annotation-spacing */
 import { Injectable } from '@angular/core';
 
@@ -7,8 +8,10 @@ import { InputClimate } from '../models/inputClimate.model';
 import { Storage } from '@ionic/storage';
 import { RoomZone } from '../models/RoomZone.model';
 import { ApiService } from './api.service';
+import { Questions } from '../models/questions.model';
 
 const baseUrl = 'http://localhost:8080/api/inputClimateNumber';
+const questionApiUrl = 'http://localhost:8080/api/helpQuestion';
 
 @Injectable({
   providedIn: 'root',
@@ -73,11 +76,14 @@ export class AdminService {
         console.log(data);
       },
       (error) => {
-        console.log(error);
+        console.log(error.message);
       }
     );
-
     this.storages.clear();
+  }
+
+  getAllHelpQuestion(): Observable<Questions[]> {
+    return this.http.get<Questions[]>(questionApiUrl);
   }
 
   getAll(): Observable<InputClimate[]> {

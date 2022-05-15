@@ -7,6 +7,18 @@
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
+  
+  <ion-card *ngFor="let i of questions">
+    <ion-card-header>
+      <ion-card-subtitle>{{i.QuestionFor}}</ion-card-subtitle>
+      <ion-card-title>How to Slide</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{i.Question}}
+    </ion-card-content>
+  </ion-card>
+<!-- 
     <ion-card>
         <ion-card-header>
           <ion-card-subtitle>Temperature</ion-card-subtitle>
@@ -14,6 +26,7 @@
         </ion-card-header>
       
         <ion-card-content>
+          
           You can slide the temperature slider from min 1 to max 6 and adjust the number according to your needs. It starts from cold (1) to warm (6)
         </ion-card-content>
       </ion-card>
@@ -38,5 +51,5 @@
         <ion-card-content>
           You can slide the humidity slider from min 1 to max 6 and adjust the number according to your needs. It starts from dry (1) to damp (6)
         </ion-card-content>
-      </ion-card>
+      </ion-card> -->
 </ion-content>
