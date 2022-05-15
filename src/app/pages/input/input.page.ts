@@ -20,8 +20,8 @@ export class InputPage implements OnInit {
   // The `ion-modal` element reference.
   modal: HTMLElement;
 
-  public roomNo: string;
-  public zone: string;
+  public roomNo?: string;
+  public zone?: string;
   public AQ: string;
   public Humid: string;
   public Temp: string;
@@ -42,11 +42,12 @@ export class InputPage implements OnInit {
     //     .fromTo('opacity', '1', '0.2');
   }
 
-  ngOnInit() {
-    this.GetZoneDataToStorage();
+  async ngOnInit() {
+    await this.adminservice.init();
+    await this.GetZoneDataToStorage();
   }
-  GetZoneDataToStorage() {
-    this.adminservice.getZoneData().then((data) => {
+  async GetZoneDataToStorage() {
+    await this.adminservice.getZoneData().then((data) => {
       this.roomNo = data.roomNo;
       this.zone = data.zoneNo;
     });
@@ -72,7 +73,7 @@ export class InputPage implements OnInit {
     let alert = this.alertCtrl.create({
       header: 'Climate Control',
       subHeader:
-        'Thank you for submitting your response. Take out our quiz for the app and earn exciting badges',
+        'Thank you for submitting your response. Take out our quiz for the app and learn about the weather control',
       buttons: [
         {
           text: 'Dismiss',
