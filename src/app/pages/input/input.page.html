@@ -202,19 +202,19 @@
     <p> Room: {{roomNo}}, Zone: {{zone}} </p>
   </div>
 
-  <div class="modalinfo btn-wrapper">
-  <ion-button id="trigger-button" class="custom-btn" expand="block" fill="outline" (click)="PopUpModal()" >
-    Click to get help
-  </ion-button>
-
-  </div>
-
-  <div class="modalquiz btn-wrapper">
-    <ion-button id="trigger-button2" class="custom-btn" expand="block" fill="outline" (click)="PopUpModalQuiz()" >
-      Play Quiz
+  <div class="inputbuttons">
+    <div class="modalinfo btn-wrapper">
+    <ion-button id="trigger-button" class="custom-btn-input" expand="block" fill="outline" (click)="PopUpModal()" >
+      Click to get help
     </ion-button>
-  
     </div>
+  
+    <div class="modalquiz btn-wrapper">
+      <ion-button id="trigger-button2" class="custom-btn-input" expand="block" fill="outline" (click)="PopUpModalQuiz()" >
+        Play Quiz
+      </ion-button>
+      </div>
+  </div>
 
   <!-- ion modal -->
   <!-- <ion-modal trigger="trigger-button">

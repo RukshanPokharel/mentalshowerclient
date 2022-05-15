@@ -70,21 +70,6 @@ export class InputPage implements OnInit {
   }
 
   async presentAlert() {
-    // if (output !== 'success') {
-    //   let alert = this.alertCtrl.create({
-    //     header: 'Climate Control',
-    //     subHeader: output,
-    //     buttons: [
-    //       {
-    //         text: 'Dismiss',
-    //         handler: () => {
-    //           this.router.navigate(['home']);
-    //         },
-    //       },
-    //     ],
-    //   });
-    //   (await alert).present();
-    // } else {
     let alert = this.alertCtrl.create({
       header: 'Climate Control',
       subHeader:
