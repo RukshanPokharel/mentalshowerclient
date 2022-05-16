@@ -37,6 +37,22 @@
   --color: #fff;
 }
 
+@media screen and (min-width: 480px) {
+  .custom-btn {
+    width: 350px;
+  }
+
+  .button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 130px;
+  }
+  
+}
+
 .button-wrapper {
   width: 100%;
   padding: 0 15px;

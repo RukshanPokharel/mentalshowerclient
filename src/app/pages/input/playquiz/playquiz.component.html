@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Drag and Drop
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="contentScrollActive">
+
+  <div slot="fixed" class="fixed-box">
+    <div class="drop-area" #dropzoneTemp>
+      <b>
+        Temperature
+      </b>
+    </div>
+
+    <div class="drop-area" #dropzoneAQ>
+      <b>
+        Air Quality
+      </b>
+    </div>
+
+    <div class="drop-area" #dropzoneHumid>
+      <b>
+        Humidity
+      </b>
+    </div>
+  </div>
+
+  <div class="item-group">
+    <!-- <ion-item *ngFor="let i of myArray">
+      {{i}} °C
+    </ion-item> -->
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Question 1</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <h2>if you feel cold or warm which slider would you slide?</h2>
+       <br>
+        Note: while dragging if the background is yellow, then it the correct answer.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Question 2</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <h2>if you feel fresh or stuffy which slider would you slide?</h2>
+       <br>
+        Note: while dragging if the background is blue, then it the correct answer.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Question 3</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+       <h2> if you feel dry or damp which slider would you slide? </h2>
+       <br>
+        Note: while dragging if the background is green, then it the correct answer.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Question 4</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+       <h2> if you feel like you are in 3 degree centigrade which slider would you slide to increase it? </h2>
+       <br>
+        Note: while dragging if the background is yellow, then it the correct answer.
+      </ion-card-content>
+    </ion-card>
+    
+
+  </div>
+</ion-content>

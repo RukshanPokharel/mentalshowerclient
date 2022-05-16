@@ -72,3 +72,33 @@ line-height: 39px;
     --border-color: #fff;
     --color: #fff;
   }
+
+  .custom-btn-input {
+      width: 100%;
+    margin: 5px 0;
+    --background: linear-gradient(180deg, #480CA8 0%, #AA02E4 100%);
+    --border-radius: 50px;
+    --background-activated:  linear-gradient(180deg, #390987 0%, #8100ac 100%);
+    --border-color: #fff;
+    --color: #fff;
+  }
+
+
+  .inputbuttons{
+      margin: auto;
+      width: 200px;
+  }
+
+//   .modalinfo{
+//     width: 100px;
+//     height: 100px;
+//     background: rgba(0, 0, 255, 0.5);
+//     margin: 10px;
+//   }
+
+@media screen and (min-width: 480px) {
+   .item-wrapper{
+       width: 30%;
+       margin: auto;
+   }
+  }

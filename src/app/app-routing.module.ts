@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'room',
     loadChildren: () => import('./pages/room/room.module').then( m => m.RoomPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
 
 ];
 
