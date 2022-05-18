@@ -1,14 +1,14 @@
 #container {
   width: 100%;
   height: 100%;
-  display: flex;
+  //display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
 .mental-shower-logo-wrapper {
-  margin-top: 200px;
+  margin-top: 60px;
 }
 
 #container strong {
@@ -19,9 +19,8 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
-
-  margin: 0;
+  margin: 0px;
+  
 }
 
 
@@ -48,7 +47,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 15px;
-    margin-bottom: 130px;
+    
   }
   
 }
@@ -56,16 +55,16 @@
 .button-wrapper {
   width: 100%;
   padding: 0 15px;
-  margin-bottom: 130px;
+  margin-bottom: 40px;
 }
 
 .ion-content-wrapper {
   text-align: center;
-  margin-bottom: 152px;
+  margin-bottom: 75px;
 }
 
 .ion-content-wrapper h1 {
-  margin-top: 72px;
+  margin-top: 40px;
   margin-bottom: 38px;
   font-style: normal;
 font-weight: 500;
@@ -76,18 +75,114 @@ color: #fff;
 }
 
 .ion-content-wrapper p {
-  width: 314px;
-height: 44px;
+
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 122% */
+
+  color: #FFFFFF;
+}
 
 
 
-font-style: normal;
-font-weight: 100;
-font-size: 18px;
-line-height: 24px;
-/* or 122% */
 
-text-align: center;
+//////////////// ROADMAP START ////////////////
 
-color: #FFFFFF;
+.roadmap {
+  padding: 30px 50px;
+  
+  .point {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    position: relative;
+    
+    &:first-child {
+      .point-index {
+        top: auto;
+        bottom: 0;
+        transform: translate(-50%, 2px) !important;
+      }
+    }    
+    
+    &:last-child {
+      .point-index {
+        top: 0;
+        transform: translate(50%, -2px) !important;
+      }
+    }   
+    
+    &:not(:last-child) {
+      border-bottom: 2px solid rgba(4, 225, 255, 0.33);
+    }
+
+    &:nth-child(odd) {
+      align-items: flex-start;
+      
+      &:not(:first-child) {
+        border-left: 2px solid rgba(4, 225, 255, 0.33);
+      }
+      
+      .point-index {
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+    }
+    
+    &:nth-child(even) {
+      align-items: flex-end;
+      
+      &:not(:last-child) {
+        border-right: 2px solid rgba(4, 225, 255, 0.33);
+      }
+      
+      .point-index {
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+    }
+    
+    .point-index {
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 200, 4, 0.33);
+      border: 2px solid rgba(255, 200, 4, 0.33);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .point-label {
+      flex: 1 0 100%;
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      
+      @media (min-width: 641px) {
+        flex: 1 0 50%;
+        width: 50%;
+      }
+    }
+    
+    .point-text {
+      flex: 1 0 100%;
+      width: 100%;
+      font-size: 12px;
+      color: darken(#FFFFFF, 20%);
+      
+      @media (min-width: 641px) {
+        flex: 1 0 50%;
+        width: 50%;
+      }
+    }
+  }
 }
