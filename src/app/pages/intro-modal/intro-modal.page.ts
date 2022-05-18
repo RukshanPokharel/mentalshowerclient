@@ -28,6 +28,8 @@ export class IntroModalPage implements OnInit {
 
   modalTitle5: string;
   modalText5: string;
+  modalImgHelp: string;
+  modalImgQuizz: string;
 
   modelId: number;
 
@@ -59,6 +61,8 @@ export class IntroModalPage implements OnInit {
 
     this.modalTitle5 = this.navParams.data.paramTitle5;
     this.modalText5 = this.navParams.data.paramText5;
+    this.modalImgHelp = this.navParams.data.paramImghelp;
+    this.modalImgQuizz = this.navParams.data.paramImgquizz;
   }
 
   async closeModal() {

@@ -48,7 +48,7 @@ export class HomePage {
           'paramID': '1',
           'paramTitle': 'For the introduction page:',
           'paramText': 'There is not only a start survey button, but also a 5 step roadmap, shown below',
-          'paramImgIntro': '../../assets/icon/intro.png',
+          'paramImgIntro': '../../assets/icon/homepageroadmapV2.png',
         }
       });
 
@@ -69,7 +69,7 @@ export class HomePage {
           'paramID': '2',
           'paramTitle2': 'For the gender section:',
           'paramText2': 'There will be 3 avatar symbols - male, female or other.',
-          'paramImgGender': '../../assets/icon/genderSection.png',
+          'paramImgGender': '../../assets/icon/gender.png',
         }
       });
 
@@ -90,7 +90,7 @@ export class HomePage {
           'paramID': '3',
           'paramTitle3': 'For the room and zone section:',
           'paramText3': 'You can choose which room you are in, with the given zones aftewards',
-          'paramImgRoom': '../../assets/icon/roomMap.png',
+          'paramImgRoom': '../../assets/icon/room.png',
         }
       });
 
@@ -110,8 +110,8 @@ export class HomePage {
         componentProps: {
           'paramID': '4',
           'paramTitle4': 'For the user input section:',
-          'paramText4': 'You would be able to choose from level 1 to 6 in the 3 categories:',
-          'paramImgInputs': '../../assets/icon/input.png',
+          'paramText4': 'You would be able to choose from level 1 to 6 in the 3 categories. Optimal state is  air is kept low on CO2 and other pollutants, while being at a pleasant temperature (18,5-21,5°C) and humidity (60-80%. rel humidity).',
+          'paramImgInputs': '../../assets/icon/inputs.png',
         }
       });
 
@@ -130,8 +130,10 @@ export class HomePage {
         component: IntroModalPage,
         componentProps: {
           'paramID': '5',
-          'paramTitle5': 'For the results before finish page:',
-          'paramText5': 'Here you will be able too see your inputs for the air quality, temperature and humidty. The room and zone number will be dislayed in the top of the page. Then the finish button as last confirmation.',
+          'paramTitle5': 'Extra stuff for the input page:',
+          'paramText5': 'Here you will be able too take a quizz where you need to place questions in the right category. Or use help to have some more explanation.',
+          'paramImghelp': '../../assets/icon/helpQ.png',
+          'paramImgquizz': '../../assets/icon/quizz.png',
         }
       });
 
