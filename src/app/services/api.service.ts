@@ -16,7 +16,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class ApiService {
   // API path
-  base_path = 'http://localhost:8080/api/inputClimateNumber';
+  base_path = 'https://mentalshower2-api.boti7.com/api/inputClimateNumber';
 
   constructor(private http: HttpClient) {}
 

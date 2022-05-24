@@ -10,8 +10,8 @@ import { RoomZone } from '../models/RoomZone.model';
 import { ApiService } from './api.service';
 import { Questions } from '../models/questions.model';
 
-const baseUrl = 'http://localhost:8080/api/inputClimateNumber';
-const questionApiUrl = 'http://localhost:8080/api/helpQuestion';
+const baseUrl = 'https://mentalshower2-api.boti7.com/api/inputClimateNumber';
+const questionApiUrl = 'https://mentalshower2-api.boti7.com/api/helpQuestion';
 
 @Injectable({
   providedIn: 'root',
