@@ -12,6 +12,9 @@ import { PlayquizComponent } from '../input/playquiz/playquiz.component';
 
 // import { Animation, AnimationController } from '@ionic/angular';
 
+/**
+ * Angular module for the condition input page
+ */
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, InputPageRoutingModule],
   declarations: [InputPage, ModalPage, PlayquizComponent],

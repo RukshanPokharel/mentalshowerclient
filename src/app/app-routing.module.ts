@@ -35,6 +35,9 @@ const routes: Routes = [
 
 ];
 
+/**
+ * Main routing module. Routes to individual page modules are defined here.
+ */
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
